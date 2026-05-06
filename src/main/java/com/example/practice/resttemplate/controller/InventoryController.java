@@ -11,6 +11,7 @@ public class InventoryController {
 
 	@GetMapping("/{productID}")
 	public String checkInventory(@PathVariable(name = "productID") String productID) {
+		System.out.println("Inventory Service Invoked And ProductID: "+productID);
 		return "1".equals(productID) ? "InStock" : "Out Of Stock";
 	}
 }
